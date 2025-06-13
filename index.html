@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Franklin</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
+
+    body {
+      margin: 0;
+      font-family: "Lexend Exa", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 200;
+      font-style: normal;
+    }
+
+    #hero .left-col,
+    #hero .right-col {
+      min-height: 100vh;
+    }
+
+    #hero .left-col {
+      background-color: #1A1919;
+    }
+
+    #hero .right-col {
+      background-color: #000000;
+    }
+
+    h1 {
+      letter-spacing: 0.1rem;
+    }
+
+    .name {
+      color: #ffffff;
+    }
+
+    .role-highlight {
+      color: #6656F5;
+    }
+
+    .social-box {
+
+      background-color: #6656F5;
+      border-radius: 0.5rem;
+      padding: 0.4rem 0.7rem;
+      font-size: 1.5rem;
+
+
+    }
+
+    /*STUDY*/
+    .studies-section {
+      background-color: #000000;
+      padding: 60px 20px;
+      color: white;
+    }
+
+    .studies-section h2 {
+      color: #6656F5;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .study-card {
+      background-color: #1E1E1E;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      height: 100%;
+    }
+
+    .study-card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      margin-right: 20px;
+      object-fit: contain;
+    }
+
+    .study-title {
+      color: #7c5fff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    .study-date {
+      color: #bbb;
+      font-size: 0.9rem;
+      margin: 0 0 4px 0;
+    }
+
+    .study-desc {
+      color: #ddd;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    /*tech skills*/
+
+    .skils-tech-section {
+      background-color: #1A1919;
+      padding: 50px;
+    }
+
+    .section-title-tech {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 40px;
+      color: #000000;
+    }
+
+    .span-tech {
+      color: #6656F5;
+      font-weight: bold;
+    }
+
+    .skills-section {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .skills-card {
+      display: flex;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: #000000;
+      flex-wrap: wrap;
+    }
+
+    .skills-label {
+      background-color: #D9D9D9;
+      color: #000;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      min-width: 220px;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      flex: 0 0 auto;
+    }
+
+    .skills-content {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 60px;
+      padding: 20px;
+      flex-grow: 1;
+      justify-content: center;
+    }
+
+    .tech-box {
+      background-color: #1e1e1e;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      border-radius: 10px;
+      width: 120px;
+      height: 120px;
+      box-shadow: 0 0 10px #6656F5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.2s;
+    }
+
+    .tech-box:hover {
+      transform: scale(1.05);
+    }
+
+    .tech-box img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+      object-fit: contain;
+    }
+
+    .tech-box p {
+      margin: 0;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+
+    /*projects*/
+    .section-projects {
+      background-color: #D9D9D9;
+      padding: 50px;
+    }
+
+    .section-title-project {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 40px;
+      color: #1A1919;
+    }
+
+    .span-project {
+      color: #6656F5;
+      font-weight: bold;
+    }
+
+    .project-card {
+      background-color: #000000;
+      padding: 25px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #d9d9d9;
+      border-left: 4px solid #D9D9D9;
+      border-right: 4px solid #D9D9D9;
+      color: white;
+      min-height: 220px;
+    }
+
+    .project-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      color: #ffffff;
+    }
+
+    .project-stack {
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-bottom: 15px;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      color: #e0e0e0;
+    }
+
+    .btn-github {
+      background-color: #6656F5;
+      color: white;
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 6px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-github:hover {
+      background-color: #4d3df3;
+      text-decoration: none;
+    }
+
+    /*soft skills*/
+    .soft-skills-section {
+      background-color: #6656F5;
+
+    }
+
+    .soft-skill-card {
+      background-color: #D9D9D9;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    }
+
+    .soft-skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    /*footer*/
+    .footer-custom {
+      background-color: #000000;
+    }
+
+    .text-light-emphasis {
+      color: rgba(255, 255, 255, 0.6);
+
+    }
+
+    .footer-link {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-link:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .navbar{
+      background-color: #1A1919;
+      color: white;
+      box-shadow: 0px 4px 8px rgba(119, 35, 35, 0.5);
+    }
+
+    .span-navbar{
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .skills-card {
+        flex-direction: column;
+      }
+
+      .skills-label {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .skills-content {
+        justify-content: center;
+      }
+    }
+
+    /* Responsive mejoras */
+    @media (max-width: 768px) {
+
+      #hero .left-col,
+      #hero .right-col {
+        min-height: auto;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+
+      .social-box {
+        position: static !important;
+        border-radius: 0rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+      }
+
+      h1 {
+        font-size: 2.2rem !important;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .social-box {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  
+  <div class="navbar">
+  <div class="container-fluid">
+    <span class="span-navbar navbar-brand mb-0 h1">FC</span>
+  </div>
+</div>
+
+
+  <!-- Hero Section -->
+  <section id="hero" class="d-flex flex-column flex-md-row position-relative">
+    <div class="container-fluid px-0">
+      <div class="row g-0 w-100 m-0">
+        <!-- Izquierda -->
+        <div class="col-12 col-md-6 d-flex align-items-center justify-content-end left-col">
+          <h1 class="display-2 text-end pe-md-5 name mb-0">
+            Franklin<br />
+            Castañeda
+          </h1>
+        </div>
+
+        <!-- Derecha -->
+        <div class="col-12 col-md-6 d-flex align-items-center justify-content-start right-col">
+          <h1 class="display-2 ps-md-5 mb-0 text-start text-white">
+            <span class="text-secondary">Junior</span><br />
+            <span class="role-highlight">Developer</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="social-box">
+      <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" class="text-white">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="https://github.com/tu-usuario" target="_blank" class="text-white">
+        <i class="bi bi-github"></i>
+      </a>
+    </div>
+  </section>
+
+
+
+  <!-- About Me Section -->
+  <section id="about"
+    style="background-color: #D9D9D9; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem 1rem; overflow-x: hidden;">
+    <div class="container">
+      <div class="row align-items-center justify-content-center text-center text-md-start g-4">
+
+        <!-- Imagen con sombra tipo bloque -->
+        <div class="col-md-4 text-center">
+          <div style="display: inline-block; position: relative;">
+            <img src="img/perrito.jpg" alt="Foto de perfil" class="img-fluid rounded"
+              style="max-width: 250px; position: relative; z-index: 2;">
+            <div style="
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            border-radius: 0.5rem;
+            z-index: 1;
+          "></div>
+          </div>
+        </div>
+
+        <!-- Texto -->
+        <div class="col-md-6 mt-5">
+          <h2 class="fw-bold mb-3">
+            <span style="color: #1A1919;">Who</span> <span style="color: #6656F5;">am I</span>?
+          </h2>
+          <p class="fs-5" style="color: #1A1919; font-weight: 300;">
+            I'm a software engineer in training, passionate about technology and naturally curious.
+            I love discovering how things work and taking every challenge to the next level.
+            I work with Java, Python, and frameworks like Spring Boot and FastAPI.
+            I persevere, I learn, and I always give my best.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="studies-section">
+    <h2 id="studies-section">Studies</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+
+      <!-- Card Template -->
+      <div class="col mb-3">
+        <article class="study-card">
+          <img src="ruta/a/tu/imagen.png" alt="Study Logo">
+          <div>
+            <h3 class="study-title">Name of the study</h3>
+            <p class="study-date">Jan 2020 – Apr 2024</p>
+            <p class="study-desc">
+              Comprehensive training in software development, analysis, design, and management.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="col mb-3">
+        <article class="study-card">
+          <img src="ruta/a/tu/imagen.png" alt="Study Logo">
+          <div>
+            <h3 class="study-title">Name of the study</h3>
+            <p class="study-date">Jan 2020 – Apr 2024</p>
+            <p class="study-desc">
+              Comprehensive training in software development, analysis, design, and management.
+            </p>
+          </div>
+        </article>
+      </div>
+
+
+      <div class="col mb-3">
+        <article class="study-card">
+          <img src="ruta/a/tu/imagen.png" alt="Study Logo">
+          <div>
+            <h3 class="study-title">Name of the study</h3>
+            <p class="study-date">Jan 2020 – Apr 2024</p>
+            <p class="study-desc">
+              Comprehensive training in software development, analysis, design, and management.
+            </p>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="skils-tech-section">
+    <h2 class="section-title-tech">Technical <span class="span-tech">skills</span></h2>
+
+    <div class="skills-section">
+
+      <!-- Backend -->
+      <div class="skills-card">
+        <div class="skills-label">Backend</div>
+        <div class="skills-content">
+          <div class="tech-box">
+            <img src="img/logo-java.png" alt="Java">
+            <p>Java</p>
+          </div>
+          <div class="tech-box">
+            <img src="ruta/logo-java.png" alt="Java">
+            <p>Java</p>
+          </div>
+          <div class="tech-box">
+            <img src="ruta/logo-java.png" alt="Java">
+            <p>Java</p>
+          </div>
+          <div class="tech-box">
+            <img src="ruta/logo-java.png" alt="Java">
+            <p>Java</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frontend -->
+      <div class="skills-card">
+        <div class="skills-label">Frontend</div>
+        <div class="skills-content">
+          <div class="tech-box">
+            <img src="ruta/logo-html5.png" alt="HTML5">
+            <p>HTML5</p>
+          </div>
+          <div class="tech-box">
+            <img src="ruta/logo-html5.png" alt="HTML5">
+            <p>HTML5</p>
+          </div>
+          <div class="tech-box">
+            <img src="ruta/logo-html5.png" alt="HTML5">
+            <p>HTML5</p>
+          </div>
+          <div class="tech-box">
+            <img src="ruta/logo-html5.png" alt="HTML5">
+            <p>HTML5</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Database -->
+      <div class="skills-card">
+        <div class="skills-label">Database</div>
+        <div class="skills-content">
+          <div class="tech-box">
+            <img src="ruta/logo-mysql.png" alt="MySQL">
+            <p>MySQL</p>
+          </div>
+          <div class="tech-box">
+            <img src="ruta/logo-mysql.png" alt="MySQL">
+            <p>MySQL</p>
+          </div>
+          <div class="tech-box">
+            <img src="ruta/logo-mysql.png" alt="MySQL">
+            <p>MySQL</p>
+          </div>
+          <div class="tech-box">
+            <img src="ruta/logo-mysql.png" alt="MySQL">
+            <p>MySQL</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="skills-card">
+        <div class="skills-label">Tools</div>
+        <div class="skills-content">
+          <div class="tech-box">
+            <img src="ruta/logo-github.png" alt="GitHub">
+            <p>GitHub</p>
+          </div>
+          <div class="tech-box">
+            <img src="ruta/logo-github.png" alt="GitHub">
+            <p>GitHub</p>
+          </div>
+          <div class="tech-box">
+            <img src="ruta/logo-github.png" alt="GitHub">
+            <p>GitHub</p>
+          </div>
+          <div class="tech-box">
+            <img src="ruta/logo-github.png" alt="GitHub">
+            <p>GitHub</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section class="section-projects">
+    <h2 class="section-title-project">My <span class="span-project">Projects</span></h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Proyecto -->
+      <div class="col-md-5 col-sm-12">
+        <div class="project-card">
+          <h5 class="project-title">TriageCare</h5>
+          <p class="project-stack">Spring Boot, Spring Security, JWT, Bcrypt</p>
+          <p class="project-desc">
+            Authentication service with Spring Boot, JWT, and Bcrypt, ideal for modern microservices architectures.
+          </p>
+          <a href="https://github.com/" target="_blank" class="btn btn-github">GITHUB</a>
+        </div>
+      </div>
+
+      <!-- Proyecto -->
+      <div class="col-md-5 col-sm-12">
+        <div class="project-card">
+          <h5 class="project-title">TriageCare</h5>
+          <p class="project-stack">Spring Boot, Spring Security, JWT, Bcrypt</p>
+          <p class="project-desc">
+            Authentication service with Spring Boot, JWT, and Bcrypt, ideal for modern microservices architectures.
+          </p>
+          <a href="https://github.com/" target="_blank" class="btn btn-github">GITHUB</a>
+        </div>
+      </div>
+
+      <!-- Proyecto -->
+      <div class="col-md-5 col-sm-12">
+        <div class="project-card">
+          <h5 class="project-title">TriageCare</h5>
+          <p class="project-stack">Spring Boot, Spring Security, JWT, Bcrypt</p>
+          <p class="project-desc">
+            Authentication service with Spring Boot, JWT, and Bcrypt, ideal for modern microservices architectures.
+          </p>
+          <a href="https://github.com/" target="_blank" class="btn btn-github">GITHUB</a>
+        </div>
+      </div>
+
+      <!-- Proyecto -->
+      <div class="col-md-5 col-sm-12">
+        <div class="project-card">
+          <h5 class="project-title">TriageCare</h5>
+          <p class="project-stack">Spring Boot, Spring Security, JWT, Bcrypt</p>
+          <p class="project-desc">
+            Authentication service with Spring Boot, JWT, and Bcrypt, ideal for modern microservices architectures.
+          </p>
+          <a href="https://github.com/" target="_blank" class="btn btn-github">GITHUB</a>
+        </div>
+      </div>
+
+      <!-- Proyecto -->
+      <div class="col-md-5 col-sm-12">
+        <div class="project-card">
+          <h5 class="project-title">TriageCare</h5>
+          <p class="project-stack">Spring Boot, Spring Security, JWT, Bcrypt</p>
+          <p class="project-desc">
+            Authentication service with Spring Boot, JWT, and Bcrypt, ideal for modern microservices architectures.
+          </p>
+          <a href="https://github.com/" target="_blank" class="btn btn-github">GITHUB</a>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+
+  <section class="soft-skills-section bg-soft-skills d-flex justify-content-center align-items-center min-vh-100">
+    <div class="container">
+      <h2 class="text-center text-white fw-bold mb-5">Soft Skills</h2>
+      <div class="row g-4 justify-content-center">
+
+        <!-- Card 1 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
+          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
+            <h5 class="fw-bold">COMMUNICATION</h5>
+            <p class="mb-0">I presented technical ideas in simple terms to a non-technical audience during a class
+              workshop.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
+          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
+            <h5 class="fw-bold">COMMUNICATION</h5>
+            <p class="mb-0">I presented technical ideas in simple terms to a non-technical audience during a class
+              workshop.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
+          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
+            <h5 class="fw-bold">COMMUNICATION</h5>
+            <p class="mb-0">I presented technical ideas in simple terms to a non-technical audience during a class
+              workshop.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
+          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
+            <h5 class="fw-bold">COMMUNICATION</h5>
+            <p class="mb-0">I presented technical ideas in simple terms to a non-technical audience during a class
+              workshop.</p>
+          </div>
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex ">
+          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
+            <h5 class="fw-bold">COMMUNICATION</h5>
+            <p class="mb-0">I presented technical ideas in simple terms to a non-technical audience during a class
+              workshop.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer-custom text-center py-3">
+    <p class="mb-1 text-light-emphasis">Franklin Castañeda</p>
+
+    <p class="mb-1">
+      <a href="assets/CV_Franklin_Castaneda.pdf" download class="footer-link">
+        Curriculum Vitae
+      </a>
+    </p>
+
+    <p class="mb-0">
+      <a href="mailto:franklin@gmail.com" class="footer-link">
+        franklin@gmail.com
+      </a>
+    </p>
+  </footer>
+
+
+
+
+</body>
+
+</html>
