@@ -40,6 +40,8 @@
       padding: 0.4rem 0.7rem;
       font-size: 1.5rem;
 
+      
+
 
     }
 
@@ -333,6 +335,10 @@
         text-align: center;
       }
 
+      #hero .left-col{
+        margin-top: 2rem;
+      }
+
       .social-box {
         position: static !important;
         border-radius: 0rem;
@@ -347,11 +353,13 @@
       }
     }
 
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
       .social-box {
         position: absolute;
         bottom: 2rem;
         left: 50%;
         transform: translateX(-50%);
       }
+
+      
     }
