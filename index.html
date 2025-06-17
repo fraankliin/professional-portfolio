@@ -6,375 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio Franklin</title>
 
+    <meta name="description"
+    content="Portafolio profesional de Franklin Castañeda, desarrollador backend junio respecializado en Java, Spring Boot y FastAPI">
+  <meta name="keywords"
+    content="Franklin Castañeda, desarrollador backend, backend developer, Java, Spring Boot, FastAPI, WebSockets, API, portafolio de programación, Vue, microservicios">
+  <meta name="author" content="Franklin Castañeda">
+  <link rel="icon" href="img/logo-f.png" type="image/x-icon">
+
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
+  <link rel="stylesheet" href="styles.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
-
-    body {
-      margin: 0;
-      font-family: "Lexend Exa", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 200;
-      font-style: normal;
-    }
-
-    #hero .left-col,
-    #hero .right-col {
-      min-height: 100vh;
-    }
-
-    #hero .left-col {
-      background-color: #1A1919;
-    }
-
-    #hero .right-col {
-      background-color: #000000;
-    }
-
-    h1 {
-      letter-spacing: 0.1rem;
-    }
-
-    .name {
-      color: #ffffff;
-    }
-
-    .role-highlight {
-      color: #6656F5;
-    }
-
-    .social-box {
-
-      background-color: #6656F5;
-      border-radius: 0.5rem;
-      padding: 0.4rem 0.7rem;
-      font-size: 1.5rem;
-
-
-    }
-
-    /*STUDY*/
-    .studies-section {
-      background-color: #000000;
-      padding: 60px 20px;
-      color: white;
-    }
-
-    .studies-section h2 {
-      color: #6656F5;
-      font-weight: 600;
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .study-card {
-      background-color: #1E1E1E;
-      border-radius: 12px;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      height: 100%;
-    }
-
-    .study-card img {
-      width: 60px;
-      height: 60px;
-      border-radius: 8px;
-      margin-right: 20px;
-      object-fit: contain;
-    }
-
-    .study-title {
-      color: #7c5fff;
-      font-weight: 600;
-      font-size: 1.1rem;
-      margin: 0;
-    }
-
-    .study-date {
-      color: #bbb;
-      font-size: 0.9rem;
-      margin: 0 0 4px 0;
-    }
-
-    .study-desc {
-      color: #ddd;
-      font-size: 0.95rem;
-      margin: 0;
-    }
-
-    /*tech skills*/
-
-    .skils-tech-section {
-      background-color: #1A1919;
-      padding: 50px;
-    }
-
-    .section-title-tech {
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: 500;
-      margin-bottom: 40px;
-      color: #000000;
-    }
-
-    .span-tech {
-      color: #6656F5;
-      font-weight: bold;
-    }
-
-    .skills-section {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .skills-card {
-      display: flex;
-      border-radius: 5px;
-      overflow: hidden;
-      background-color: #000000;
-      flex-wrap: wrap;
-    }
-
-    .skills-label {
-      background-color: #D9D9D9;
-      color: #000;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      min-width: 220px;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      flex: 0 0 auto;
-    }
-
-    .skills-content {
-      display: flex;
-      flex-wrap: wrap;
-
-      gap: 60px;
-      padding: 20px;
-      flex-grow: 1;
-      justify-content: center;
-    }
-
-    .tech-box {
-      background-color: #1e1e1e;
-      color: white;
-      text-align: center;
-      padding: 15px 10px;
-      border-radius: 10px;
-      width: 120px;
-      height: 120px;
-      box-shadow: 0 0 10px #6656F5;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      transition: transform 0.2s;
-    }
-
-    .tech-box:hover {
-      transform: scale(1.05);
-    }
-
-    .tech-box img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 10px;
-      object-fit: contain;
-    }
-
-    .tech-box p {
-      margin: 0;
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
-
-    /*projects*/
-    .section-projects {
-      background-color: #D9D9D9;
-      padding: 50px;
-    }
-
-    .section-title-project {
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: 500;
-      margin-bottom: 40px;
-      color: #1A1919;
-    }
-
-    .span-project {
-      color: #6656F5;
-      font-weight: bold;
-    }
-
-    .project-card {
-      background-color: #000000;
-      padding: 25px 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px #d9d9d9;
-      border-left: 4px solid #D9D9D9;
-      border-right: 4px solid #D9D9D9;
-      color: white;
-      min-height: 220px;
-    }
-
-    .project-title {
-      font-weight: 700;
-      font-size: 1.2rem;
-      margin-bottom: 5px;
-      color: #ffffff;
-    }
-
-    .project-stack {
-      font-size: 0.85rem;
-      color: #aaa;
-      margin-bottom: 15px;
-    }
-
-    .project-desc {
-      font-size: 0.9rem;
-      margin-bottom: 20px;
-      color: #e0e0e0;
-    }
-
-    .btn-github {
-      background-color: #6656F5;
-      color: white;
-      font-weight: 600;
-      font-size: 0.8rem;
-      padding: 6px 12px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-github:hover {
-      background-color: #4d3df3;
-      text-decoration: none;
-    }
-
-    /*soft skills*/
-    .soft-skills-section {
-      background-color: #6656F5;
-
-    }
-
-    .soft-skill-card {
-      background-color: #D9D9D9;
-      border: none;
-      border-radius: 20px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    }
-
-    .soft-skill-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-    }
-
-    /*footer*/
-    .footer-custom {
-      background-color: #000000;
-    }
-
-    .text-light-emphasis {
-      color: rgba(255, 255, 255, 0.6);
-
-    }
-
-    .footer-link {
-      color: rgba(255, 255, 255, 0.6);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .footer-link:hover {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-
-    .navbar{
-      background-color: #1A1919;
-      color: white;
-      box-shadow: 0px 4px 8px rgba(119, 35, 35, 0.5);
-    }
-
-    .span-navbar{
-      color: white;
-    }
-
-    @media (max-width: 768px) {
-      .skills-card {
-        flex-direction: column;
-      }
-
-      .skills-label {
-        width: 100%;
-        justify-content: center;
-      }
-
-      .skills-content {
-        justify-content: center;
-      }
-    }
-
-    /* Responsive mejoras */
-    @media (max-width: 768px) {
-
-      #hero .left-col,
-      #hero .right-col {
-        min-height: auto;
-        padding: 2rem 1rem;
-        text-align: center;
-      }
-
-      .social-box {
-        position: static !important;
-        border-radius: 0rem;
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-
-      }
-
-      h1 {
-        font-size: 2.2rem !important;
-      }
-    }
-
-    @media (min-width: 769px) {
-      .social-box {
-        position: absolute;
-        bottom: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
+   
   </style>
 </head>
+
+
+
+  
 
 <body>
 
   
-  <div class="navbar">
+<nav class="navbar sticky-top shadow">
   <div class="container-fluid">
-    <span class="span-navbar navbar-brand mb-0 h1">FC</span>
+    <span class=" mb-0">FC</span>
   </div>
-</div>
+</nav>
+
 
 
   <!-- Hero Section -->
@@ -401,10 +61,10 @@
 
     <!-- Redes sociales -->
     <div class="social-box">
-      <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" class="text-white">
+      <a href="https://www.linkedin.com/in/franklin-castañeda-8264a4349" target="_blank" class="text-white">
         <i class="bi bi-linkedin"></i>
       </a>
-      <a href="https://github.com/tu-usuario" target="_blank" class="text-white">
+      <a href="https://github.com/fraankliin" target="_blank" class="text-white">
         <i class="bi bi-github"></i>
       </a>
     </div>
@@ -421,7 +81,7 @@
         <!-- Imagen con sombra tipo bloque -->
         <div class="col-md-4 text-center">
           <div style="display: inline-block; position: relative;">
-            <img src="img/perrito.jpg" alt="Foto de perfil" class="img-fluid rounded"
+            <img src="img/foto-personal.jpeg" alt="Foto de perfil" class="img-fluid rounded"
               style="max-width: 250px; position: relative; z-index: 2;">
             <div style="
             position: absolute;
@@ -462,10 +122,11 @@
       <!-- Card Template -->
       <div class="col mb-3">
         <article class="study-card">
-          <img src="ruta/a/tu/imagen.png" alt="Study Logo">
+          <img src="img/umb-logo.webp" alt="Study Logo">
           <div>
-            <h3 class="study-title">Name of the study</h3>
-            <p class="study-date">Jan 2020 – Apr 2024</p>
+            <h3 class="study-title">Software Engineering</h3>
+            <p class="study-date">U. Manuela Beltrán</p>
+            <p class="study-date">In progress - 6th semester</p>
             <p class="study-desc">
               Comprehensive training in software development, analysis, design, and management.
             </p>
@@ -475,12 +136,13 @@
 
       <div class="col mb-3">
         <article class="study-card">
-          <img src="ruta/a/tu/imagen.png" alt="Study Logo">
+          <img src="img/educamas_logo.jpg" alt="Study Logo">
           <div>
-            <h3 class="study-title">Name of the study</h3>
-            <p class="study-date">Jan 2020 – Apr 2024</p>
+            <h3 class="study-title">Junior Frontend Developer</h3>
+            <p class="study-date">Programate School</p>
+            <p class="study-date">Apr 2022 - Nov 2022</p>
             <p class="study-desc">
-              Comprehensive training in software development, analysis, design, and management.
+              Intensive training in HTML, CSS, JavaScript, and modern front-end tools.
             </p>
           </div>
         </article>
@@ -489,12 +151,13 @@
 
       <div class="col mb-3">
         <article class="study-card">
-          <img src="ruta/a/tu/imagen.png" alt="Study Logo">
+          <img src="img/educamas_logo.jpg" alt="Study Logo">
           <div>
-            <h3 class="study-title">Name of the study</h3>
-            <p class="study-date">Jan 2020 – Apr 2024</p>
+            <h3 class="study-title">Empleatech</h3>
+            <p class="study-date">Educamas</p>
+            <p class="study-date">Apr 2025 – May 2025</p>
             <p class="study-desc">
-              Comprehensive training in software development, analysis, design, and management.
+              Exploration of professional profile, job skills, and legal aspects of employment.
             </p>
           </div>
         </article>
@@ -518,16 +181,16 @@
             <p>Java</p>
           </div>
           <div class="tech-box">
-            <img src="ruta/logo-java.png" alt="Java">
-            <p>Java</p>
+            <img src="img/spring-logo.png" alt="Spring">
+            <p>Spring</p>
           </div>
           <div class="tech-box">
-            <img src="ruta/logo-java.png" alt="Java">
-            <p>Java</p>
+            <img src="img/py-logo.png" alt="Python">
+            <p>Python</p>
           </div>
           <div class="tech-box">
-            <img src="ruta/logo-java.png" alt="Java">
-            <p>Java</p>
+            <img src="img/fastapi-logo.png" alt="FastAPI">
+            <p>FastAPI</p>
           </div>
         </div>
       </div>
@@ -537,20 +200,20 @@
         <div class="skills-label">Frontend</div>
         <div class="skills-content">
           <div class="tech-box">
-            <img src="ruta/logo-html5.png" alt="HTML5">
+            <img src="img/html-logo.png" alt="HTML5">
             <p>HTML5</p>
           </div>
           <div class="tech-box">
-            <img src="ruta/logo-html5.png" alt="HTML5">
-            <p>HTML5</p>
+            <img src="img/css-logo.png" alt="CSS">
+            <p>CSS</p>
           </div>
           <div class="tech-box">
-            <img src="ruta/logo-html5.png" alt="HTML5">
-            <p>HTML5</p>
+            <img src="img/vue-logo.png" alt="VUE">
+            <p>VUE</p>
           </div>
           <div class="tech-box">
-            <img src="ruta/logo-html5.png" alt="HTML5">
-            <p>HTML5</p>
+            <img src="img/Bootstrap_logo.png" alt="Bootstrap">
+            <p>Bootstrap</p>
           </div>
         </div>
       </div>
@@ -560,21 +223,14 @@
         <div class="skills-label">Database</div>
         <div class="skills-content">
           <div class="tech-box">
-            <img src="ruta/logo-mysql.png" alt="MySQL">
+            <img src="img/mysql-logo.png " alt="MySQL">
             <p>MySQL</p>
           </div>
           <div class="tech-box">
-            <img src="ruta/logo-mysql.png" alt="MySQL">
-            <p>MySQL</p>
+            <img src="img/mongodb-logo.png" alt="MySQL">
+            <p>MongoDB</p>
           </div>
-          <div class="tech-box">
-            <img src="ruta/logo-mysql.png" alt="MySQL">
-            <p>MySQL</p>
-          </div>
-          <div class="tech-box">
-            <img src="ruta/logo-mysql.png" alt="MySQL">
-            <p>MySQL</p>
-          </div>
+          
         </div>
       </div>
 
@@ -583,16 +239,16 @@
         <div class="skills-label">Tools</div>
         <div class="skills-content">
           <div class="tech-box">
-            <img src="ruta/logo-github.png" alt="GitHub">
-            <p>GitHub</p>
+            <img src="img/git-logo.png" alt="GitHub">
+            <p>Git</p>
           </div>
           <div class="tech-box">
-            <img src="ruta/logo-github.png" alt="GitHub">
-            <p>GitHub</p>
+            <img src="img/postman-icon.png" alt="GitHub">
+            <p>Postman</p>
           </div>
           <div class="tech-box">
-            <img src="ruta/logo-github.png" alt="GitHub">
-            <p>GitHub</p>
+            <img src="img/jira-logo.png" alt="GitHub">
+            <p>Jira</p>
           </div>
           <div class="tech-box">
             <img src="ruta/logo-github.png" alt="GitHub">
@@ -614,12 +270,24 @@
       <!-- Proyecto -->
       <div class="col-md-5 col-sm-12">
         <div class="project-card">
-          <h5 class="project-title">TriageCare</h5>
-          <p class="project-stack">Spring Boot, Spring Security, JWT, Bcrypt</p>
+          <h5 class="project-title">AuthMaster</h5>
+          <p class="project-stack">Spring Boot, Spring Security, JWT, BCrypt</p>
           <p class="project-desc">
-            Authentication service with Spring Boot, JWT, and Bcrypt, ideal for modern microservices architectures.
+            Authentication service with Spring Boot, JWT, and BCrypt, ideal for modern microservices architectures.
           </p>
-          <a href="https://github.com/" target="_blank" class="btn btn-github">GITHUB</a>
+          <a href="https://github.com/fraankliin/Auth-Service-JWT-Spring.git" target="_blank" class="btn btn-github">GITHUB</a>
+        </div>
+      </div>
+
+      <!-- Proyecto -->
+      <div class="col-md-5 col-sm-12">
+        <div class="project-card">
+          <h5 class="project-title">WebSolutions</h5>
+          <p class="project-stack">HTML5, CSS, VUE, JS, Google Tagmanager, Google Analytics</p>
+          <p class="project-desc">
+            Web catalog and news with best practices, accessibility, SEO, and Schema.org microtagging.
+          </p>
+          <a href="https://github.com/fraankliin/ing-web-proyect.git" target="_blank" class="btn btn-github">GITHUB</a>
         </div>
       </div>
 
@@ -627,47 +295,59 @@
       <div class="col-md-5 col-sm-12">
         <div class="project-card">
           <h5 class="project-title">TriageCare</h5>
-          <p class="project-stack">Spring Boot, Spring Security, JWT, Bcrypt</p>
+          <p class="project-stack">Java</p>
           <p class="project-desc">
-            Authentication service with Spring Boot, JWT, and Bcrypt, ideal for modern microservices architectures.
+            Emergency hospital care simulator with Java and Swing, applying pillars of Object-Oriented Programming.
           </p>
-          <a href="https://github.com/" target="_blank" class="btn btn-github">GITHUB</a>
+          <a href="https://github.com/fraankliin/Proyecto-POO" target="_blank" class="btn btn-github">GITHUB</a>
         </div>
       </div>
 
       <!-- Proyecto -->
       <div class="col-md-5 col-sm-12">
         <div class="project-card">
-          <h5 class="project-title">TriageCare</h5>
-          <p class="project-stack">Spring Boot, Spring Security, JWT, Bcrypt</p>
+          <h5 class="project-title">YourBET</h5>
+          <p class="project-stack">Java, JSP, Servlets, MySQL, JPA</p>
           <p class="project-desc">
-            Authentication service with Spring Boot, JWT, and Bcrypt, ideal for modern microservices architectures.
+            Sports betting web platform with Java, JSP, and Servlets, integrating live match APIs.
           </p>
-          <a href="https://github.com/" target="_blank" class="btn btn-github">GITHUB</a>
+          <a href="https://github.com/fraankliin/Proyecto_Pagina_Apuestas.git" target="_blank" class="btn btn-github">GITHUB</a>
+        </div>
+      </div>
+
+       <!-- Proyecto -->
+      <div class="col-md-5 col-sm-12">
+        <div class="project-card">
+          <h5 class="project-title">FinWise API</h5>
+          <p class="project-stack">FastAPI, JWT, MongoDB, Python</p>
+          <p class="project-desc">
+            Personal Finance API with FastAPI, JWT, and MongoDB: Secure monthly income, expenses, and summaries.
+          </p>
+          <a href="https://github.com/Universidad-UMB/proyecto-fastAPI-mongoDB" target="_blank" class="btn btn-github">GITHUB</a>
         </div>
       </div>
 
       <!-- Proyecto -->
       <div class="col-md-5 col-sm-12">
         <div class="project-card">
-          <h5 class="project-title">TriageCare</h5>
-          <p class="project-stack">Spring Boot, Spring Security, JWT, Bcrypt</p>
+          <h5 class="project-title">ChronoTrack Service</h5>
+          <p class="project-stack">Spring Boot, Spring Data JPA, PostgreSQL</p>
           <p class="project-desc">
-            Authentication service with Spring Boot, JWT, and Bcrypt, ideal for modern microservices architectures.
+            Spring Boot REST service for storing history with JPA persistence
           </p>
-          <a href="https://github.com/" target="_blank" class="btn btn-github">GITHUB</a>
+          <a href="https://github.com/fraankliin/history-service-spring.git" target="_blank" class="btn btn-github">GITHUB</a>
         </div>
       </div>
 
-      <!-- Proyecto -->
+
       <div class="col-md-5 col-sm-12">
         <div class="project-card">
-          <h5 class="project-title">TriageCare</h5>
-          <p class="project-stack">Spring Boot, Spring Security, JWT, Bcrypt</p>
+          <h5 class="project-title">Carbon Footprint</h5>
+          <p class="project-stack">Spring, GO, FastAPI, VUE</p>
           <p class="project-desc">
-            Authentication service with Spring Boot, JWT, and Bcrypt, ideal for modern microservices architectures.
+            Microservices-based application for calculating and tracking personal environmental impact.
           </p>
-          <a href="https://github.com/" target="_blank" class="btn btn-github">GITHUB</a>
+          <a href="https://github.com/ncastellanosort/carbon_footprint_frontend.git" target="_blank" class="btn btn-github">GITHUB</a>
         </div>
       </div>
 
@@ -679,54 +359,85 @@
 
   <section class="soft-skills-section bg-soft-skills d-flex justify-content-center align-items-center min-vh-100">
     <div class="container">
-      <h2 class="text-center text-white fw-bold mb-5">Soft Skills</h2>
+      <h2 class="text-center text-white fw-bold mb-5 mt-5">Soft Skills</h2>
       <div class="row g-4 justify-content-center">
 
         <!-- Card 1 -->
         <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
           <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
-            <h5 class="fw-bold">COMMUNICATION</h5>
-            <p class="mb-0">I presented technical ideas in simple terms to a non-technical audience during a class
-              workshop.</p>
+            <h5 class="fw-bold">CRITICAL AND ANALYTICAL THINKING</h5>
+            <p class="mb-0">As a seasonal seller, I analyzed purchasing patterns to reorganize products and increase visibility.
+            </p>
           </div>
         </div>
 
         <!-- Card 2 -->
         <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
           <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
-            <h5 class="fw-bold">COMMUNICATION</h5>
-            <p class="mb-0">I presented technical ideas in simple terms to a non-technical audience during a class
-              workshop.</p>
+            <h5 class="fw-bold">TROUBLESHOO-TING</h5>
+            <p class="mb-0">In a university project, I fixed a bug that prevented compilation just before the final submission.</p>
           </div>
         </div>
 
         <!-- Card 3 -->
         <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
           <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
-            <h5 class="fw-bold">COMMUNICATION</h5>
-            <p class="mb-0">I presented technical ideas in simple terms to a non-technical audience during a class
-              workshop.</p>
+            <h5 class="fw-bold">TEAMWORK</h5>
+            <p class="mb-0">During my Sunday job as a waiter, I coordinated effectively with the kitchen and my colleagues to provide timely service.</p>
           </div>
         </div>
 
         <!-- Card 4 -->
         <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
           <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
-            <h5 class="fw-bold">COMMUNICATION</h5>
-            <p class="mb-0">I presented technical ideas in simple terms to a non-technical audience during a class
-              workshop.</p>
+            <h5 class="fw-bold">ASSERTIVE COMMUNICATION</h5>
+            <p class="mb-0">When working as a server, I expressed myself clearly to avoid mistakes in orders during high demand.</p>
           </div>
         </div>
 
 
-        <!-- Card 4 -->
+        <!-- Card 5 -->
         <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex ">
           <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
-            <h5 class="fw-bold">COMMUNICATION</h5>
-            <p class="mb-0">I presented technical ideas in simple terms to a non-technical audience during a class
-              workshop.</p>
+            <h5 class="fw-bold">EMPATHY</h5>
+            <p class="mb-0">At university, I supported a classmate with personal difficulties by adjusting group project assignments.</p>
           </div>
         </div>
+
+        <!-- Card 6 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex ">
+          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
+            <h5 class="fw-bold">RESPONSIBILITY</h5>
+            <p class="mb-0">As a seasonal salesperson, I always arrived on time and took on key responsibilities on busy days.</p>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+       
+
+        <!-- Card 8 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex ">
+          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
+            <h5 class="fw-bold">TIME MANAGEMENT</h5>
+            <p class="mb-0">In college, I organized classes, projects, and midterms without falling behind or compromising the quality of my work.</p>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex ">
+          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
+            <h5 class="fw-bold">ADAPTABILITY</h5>
+            <p class="mb-0">During my first day as a Sunday server, I quickly adapted to the pace and protocol of the restaurant.</p>
+          </div>
+        </div>
+
+         <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex mb-5">
+          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
+            <h5 class="fw-bold">ACTIVE LISTENING</h5>
+            <p class="mb-0">During practical classes, I listened carefully to the teacher's recommendations and applied them to improve the project.</p>
+          </div>
+        </div>
+
 
       </div>
     </div>
@@ -743,8 +454,8 @@
     </p>
 
     <p class="mb-0">
-      <a href="mailto:franklin@gmail.com" class="footer-link">
-        franklin@gmail.com
+      <a href="mailto:franklin2908david@gmail.com" class="footer-link">
+        franklin2908david@gmail.com
       </a>
     </p>
   </footer>
