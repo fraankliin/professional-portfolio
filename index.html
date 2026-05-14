@@ -1,465 +1,665 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Franklin</title>
-
-    <meta name="description"
-    content="Portafolio profesional de Franklin Castañeda, desarrollador backend junio respecializado en Java, Spring Boot y FastAPI">
-  <meta name="keywords"
-    content="Franklin Castañeda, desarrollador backend, backend developer, Java, Spring Boot, FastAPI, WebSockets, API, portafolio de programación, Vue, microservicios">
+  <title>Franklin Castañeda — Junior AI Engineer</title>
+  <meta name="description" content="Portfolio of Franklin Castañeda, Junior AI Engineer and Backend Developer specializing in Java, Python, FastAPI, and AI integrations.">
+  <meta name="keywords" content="Franklin Castañeda, Junior AI Engineer, backend developer, Java, Spring Boot, FastAPI, Python, Gemini AI, PDF processing, AI integration, portafolio">
   <meta name="author" content="Franklin Castañeda">
   <link rel="icon" href="img/logo-f.png" type="image/x-icon">
 
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css">
-  <style>
-   
-  </style>
 </head>
-
-
-
-  
 
 <body>
 
-  
-<nav class="navbar sticky-top shadow">
-  <div class="container-fluid">
-    <span class=" mb-0">FC</span>
-  </div>
-</nav>
+  <!-- ══════════ NAVBAR ══════════ -->
+  <nav class="navbar" id="mainNav">
+    <div class="container-fluid d-flex align-items-center justify-content-between px-4">
+      <a class="nav-logo" href="#hero">FC</a>
+      <ul class="nav-links d-none d-md-flex list-unstyled mb-0 gap-4">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#studies">Studies</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger d-md-none" id="hamburgerBtn" aria-label="Menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+    <div class="nav-mobile-menu d-md-none" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#studies">Studies</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
 
-
-  <!-- Hero Section -->
-  <section id="hero" class="d-flex flex-column flex-md-row position-relative">
-    <div class="container-fluid px-0">
-      <div class="row g-0 w-100 m-0">
-        <!-- Izquierda -->
-        <div class="col-12 col-md-6 d-flex align-items-center justify-content-end left-col">
-          <h1 class="display-2 text-end pe-md-5 name mb-0">
-            Franklin<br />
-            Castañeda
-          </h1>
+  <!-- ══════════ HERO ══════════ -->
+  <section id="hero">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-label reveal-up">AI Engineer</div>
+        <h1 class="hero-name reveal-up delay-1">Franklin<br><span>Castañeda</span></h1>
+        <p class="hero-sub reveal-up delay-2">Building intelligent systems that<br>automate the complex.</p>
+        <div class="hero-cta reveal-up delay-3">
+          <a href="#experience" class="btn-primary-custom">View Experience</a>
+          <a href="#contact" class="btn-outline-custom">Get in Touch</a>
         </div>
-
-        <!-- Derecha -->
-        <div class="col-12 col-md-6 d-flex align-items-center justify-content-start right-col">
-          <h1 class="display-2 ps-md-5 mb-0 text-start text-white">
-            <span class="text-secondary">Junior</span><br />
-            <span class="role-highlight">Developer</span>
-          </h1>
+      </div>
+      <div class="hero-right">
+        <div class="hero-visual">
+          <div class="orbit-ring ring-1"></div>
+          <div class="orbit-ring ring-2"></div>
+          <div class="orbit-ring ring-3"></div>
+          <div class="hero-core">
+            <span class="hero-badge">AI</span>
+          </div>
+          <div class="orbit-dot dot-1"><i class="bi bi-cpu"></i></div>
+          <div class="orbit-dot dot-2"><i class="bi bi-file-earmark-pdf"></i></div>
+          <div class="orbit-dot dot-3"><i class="bi bi-braces"></i></div>
+          <div class="orbit-dot dot-4"><i class="bi bi-database"></i></div>
         </div>
       </div>
     </div>
-
-    <!-- Redes sociales -->
-    <div class="social-box">
-      <a href="https://www.linkedin.com/in/franklin-castañeda-8264a4349" target="_blank" class="text-white">
+    <div class="hero-socials">
+      <a href="https://www.linkedin.com/in/franklin-castañeda-8264a4349" target="_blank" aria-label="LinkedIn">
         <i class="bi bi-linkedin"></i>
       </a>
-      <a href="https://github.com/fraankliin" target="_blank" class="text-white">
+      <a href="https://github.com/fraankliin" target="_blank" aria-label="GitHub">
         <i class="bi bi-github"></i>
       </a>
+      <a href="mailto:franklin2908david@gmail.com" aria-label="Email">
+        <i class="bi bi-envelope"></i>
+      </a>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
     </div>
   </section>
 
 
-
-  <!-- About Me Section -->
-  <section id="about"
-    style="background-color: #D9D9D9; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem 1rem; overflow-x: hidden;">
+  <!-- ══════════ ABOUT ══════════ -->
+  <section id="about" class="about-section">
     <div class="container">
-      <div class="row align-items-center justify-content-center text-center text-md-start g-4">
-
-        <!-- Imagen con sombra tipo bloque -->
+      <div class="row align-items-center g-5">
         <div class="col-md-4 text-center">
-          <div style="display: inline-block; position: relative;">
-            <img src="img/foto-personal.jpeg" alt="Foto de perfil" class="img-fluid rounded"
-              style="max-width: 250px; position: relative; z-index: 2;">
-            <div style="
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 100%;
-            height: 100%;
-            background-color: #000;
-            border-radius: 0.5rem;
-            z-index: 1;
-          "></div>
+          <div class="photo-wrap">
+            <img src="img/foto-personal.jpeg" alt="Franklin Castañeda" class="profile-photo">
+            <div class="photo-border"></div>
           </div>
         </div>
+        <div class="col-md-8">
+          <p class="section-eyebrow">Who am I</p>
+          <h2 class="section-title">Software engineer evolving into<br><span>AI-powered solutions.</span></h2>
+          <p class="about-text">
 
-        <!-- Texto -->
-        <div class="col-md-6 mt-5">
-          <h2 class="fw-bold mb-3">
-            <span style="color: #1A1919;">Who</span> <span style="color: #6656F5;">am I</span>?
-          </h2>
-          <p class="fs-5" style="color: #1A1919; font-weight: 300;">
-            I'm a software engineer in training, passionate about technology and naturally curious.
-            I love discovering how things work and taking every challenge to the next level.
-            I work with Java, Python, and frameworks like Spring Boot and FastAPI.
-            I persevere, I learn, and I always give my best.
+              I'm a 7th-semester Software Engineering student with hands-on professional experience building and integrating <strong>AI-driven systems</strong> and <strong>automation solutions</strong>. I specialize in intelligent document processing, workflow automation, and integrating LLM models into real-world business processes.<br><br>
+
+I have led the design, development, and deployment of production AI systems, working across the full software lifecycle including analysis, architecture, development, testing, and maintenance. Currently, I’m focused on growing in <strong>Applied AI</strong> and <strong>LLM-based systems</strong>.
+
+
           </p>
+          <p class="about-text">
+            My focus is on building backend systems that are smart, scalable, and genuinely useful — from automation and document
+            intelligence to AI integrations with models like Gemini.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">1+</span>
+              <span class="stat-label">Year Professional Exp.</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">7+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">AI</span>
+              <span class="stat-label">Production Systems</span>
+            </div>
+          </div>
         </div>
-
       </div>
     </div>
   </section>
 
 
-
-  <section class="studies-section">
-    <h2 id="studies-section">Studies</h2>
-    <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
-
-      <!-- Card Template -->
-      <div class="col mb-3">
-        <article class="study-card">
-          <img src="img/umb-logo.webp" alt="Study Logo">
-          <div>
-            <h3 class="study-title">Software Engineering</h3>
-            <p class="study-date">U. Manuela Beltrán</p>
-            <p class="study-date">In progress - 6th semester</p>
-            <p class="study-desc">
-              Comprehensive training in software development, analysis, design, and management.
-            </p>
-          </div>
-        </article>
-      </div>
-
-      <div class="col mb-3">
-        <article class="study-card">
-          <img src="img/educamas_logo.jpg" alt="Study Logo">
-          <div>
-            <h3 class="study-title">Junior Frontend Developer</h3>
-            <p class="study-date">Programate School</p>
-            <p class="study-date">Apr 2022 - Nov 2022</p>
-            <p class="study-desc">
-              Intensive training in HTML, CSS, JavaScript, and modern front-end tools.
-            </p>
-          </div>
-        </article>
-      </div>
-
-
-      <div class="col mb-3">
-        <article class="study-card">
-          <img src="img/educamas_logo.jpg" alt="Study Logo">
-          <div>
-            <h3 class="study-title">Empleatech</h3>
-            <p class="study-date">Educamas</p>
-            <p class="study-date">Apr 2025 – May 2025</p>
-            <p class="study-desc">
-              Exploration of professional profile, job skills, and legal aspects of employment.
-            </p>
-          </div>
-        </article>
-      </div>
-
-    </div>
-  </section>
-
-
-  <section class="skils-tech-section">
-    <h2 class="section-title-tech">Technical <span class="span-tech">skills</span></h2>
-
-    <div class="skills-section">
-
-      <!-- Backend -->
-      <div class="skills-card">
-        <div class="skills-label">Backend</div>
-        <div class="skills-content">
-          <div class="tech-box">
-            <img src="img/logo-java.png" alt="Java">
-            <p>Java</p>
-          </div>
-          <div class="tech-box">
-            <img src="img/spring-logo.png" alt="Spring">
-            <p>Spring</p>
-          </div>
-          <div class="tech-box">
-            <img src="img/py-logo.png" alt="Python">
-            <p>Python</p>
-          </div>
-          <div class="tech-box">
-            <img src="img/fastapi-logo.png" alt="FastAPI">
-            <p>FastAPI</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Frontend -->
-      <div class="skills-card">
-        <div class="skills-label">Frontend</div>
-        <div class="skills-content">
-          <div class="tech-box">
-            <img src="img/html-logo.png" alt="HTML5">
-            <p>HTML5</p>
-          </div>
-          <div class="tech-box">
-            <img src="img/css-logo.png" alt="CSS">
-            <p>CSS</p>
-          </div>
-          <div class="tech-box">
-            <img src="img/vue-logo.png" alt="VUE">
-            <p>VUE</p>
-          </div>
-          <div class="tech-box">
-            <img src="img/Bootstrap_logo.png" alt="Bootstrap">
-            <p>Bootstrap</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Database -->
-      <div class="skills-card">
-        <div class="skills-label">Database</div>
-        <div class="skills-content">
-          <div class="tech-box">
-            <img src="img/mysql-logo.png " alt="MySQL">
-            <p>MySQL</p>
-          </div>
-          <div class="tech-box">
-            <img src="img/mongodb-logo.png" alt="MySQL">
-            <p>MongoDB</p>
-          </div>
-          
-        </div>
-      </div>
-
-      <!-- Tools -->
-      <div class="skills-card">
-        <div class="skills-label">Tools</div>
-        <div class="skills-content">
-          <div class="tech-box">
-            <img src="img/git-logo.png" alt="GitHub">
-            <p>Git</p>
-          </div>
-          <div class="tech-box">
-            <img src="img/postman-icon.png" alt="GitHub">
-            <p>Postman</p>
-          </div>
-          <div class="tech-box">
-            <img src="img/jira-logo.png" alt="GitHub">
-            <p>Jira</p>
-          </div>
-        
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-
-  <section class="section-projects">
-    <h2 class="section-title-project">My <span class="span-project">Projects</span></h2>
-
-    <div class="row g-4 justify-content-center">
-
-      <!-- Proyecto -->
-      <div class="col-md-5 col-sm-12">
-        <div class="project-card">
-          <h5 class="project-title">AuthMaster</h5>
-          <p class="project-stack">Spring Boot, Spring Security, JWT, BCrypt</p>
-          <p class="project-desc">
-            Authentication service with Spring Boot, JWT, and BCrypt, ideal for modern microservices architectures.
-          </p>
-          <a href="https://github.com/fraankliin/Auth-Service-JWT-Spring.git" target="_blank" class="btn btn-github">GITHUB</a>
-        </div>
-      </div>
-
-      <!-- Proyecto -->
-      <div class="col-md-5 col-sm-12">
-        <div class="project-card">
-          <h5 class="project-title">WebSolutions</h5>
-          <p class="project-stack">HTML5, CSS, VUE, JS, Google Tagmanager, Google Analytics</p>
-          <p class="project-desc">
-            Web catalog and news with best practices, accessibility, SEO, and Schema.org microtagging.
-          </p>
-          <a href="https://github.com/fraankliin/ing-web-proyect.git" target="_blank" class="btn btn-github">GITHUB</a>
-        </div>
-      </div>
-
-      <!-- Proyecto -->
-      <div class="col-md-5 col-sm-12">
-        <div class="project-card">
-          <h5 class="project-title">TriageCare</h5>
-          <p class="project-stack">Java</p>
-          <p class="project-desc">
-            Emergency hospital care simulator with Java and Swing, applying pillars of Object-Oriented Programming.
-          </p>
-          <a href="https://github.com/fraankliin/Proyecto-POO" target="_blank" class="btn btn-github">GITHUB</a>
-        </div>
-      </div>
-
-      <!-- Proyecto -->
-      <div class="col-md-5 col-sm-12">
-        <div class="project-card">
-          <h5 class="project-title">YourBET</h5>
-          <p class="project-stack">Java, JSP, Servlets, MySQL, JPA</p>
-          <p class="project-desc">
-            Sports betting web platform with Java, JSP, and Servlets, integrating live match APIs.
-          </p>
-          <a href="https://github.com/fraankliin/Proyecto_Pagina_Apuestas.git" target="_blank" class="btn btn-github">GITHUB</a>
-        </div>
-      </div>
-
-       <!-- Proyecto -->
-      <div class="col-md-5 col-sm-12">
-        <div class="project-card">
-          <h5 class="project-title">FinWise API</h5>
-          <p class="project-stack">FastAPI, JWT, MongoDB, Python</p>
-          <p class="project-desc">
-            Personal Finance API with FastAPI, JWT, and MongoDB: Secure monthly income, expenses, and summaries.
-          </p>
-          <a href="https://github.com/Universidad-UMB/proyecto-fastAPI-mongoDB" target="_blank" class="btn btn-github">GITHUB</a>
-        </div>
-      </div>
-
-      <!-- Proyecto -->
-      <div class="col-md-5 col-sm-12">
-        <div class="project-card">
-          <h5 class="project-title">ChronoTrack Service</h5>
-          <p class="project-stack">Spring Boot, Spring Data JPA, PostgreSQL</p>
-          <p class="project-desc">
-            Spring Boot REST service for storing history with JPA persistence
-          </p>
-          <a href="https://github.com/fraankliin/history-service-spring.git" target="_blank" class="btn btn-github">GITHUB</a>
-        </div>
-      </div>
-
-
-      <div class="col-md-5 col-sm-12">
-        <div class="project-card">
-          <h5 class="project-title">Carbon Footprint</h5>
-          <p class="project-stack">Spring, GO, FastAPI, VUE</p>
-          <p class="project-desc">
-            Microservices-based application for calculating and tracking personal environmental impact.
-          </p>
-          <a href="https://github.com/ncastellanosort/carbon_footprint_frontend.git" target="_blank" class="btn btn-github">GITHUB</a>
-        </div>
-      </div>
-
-
-
-    </div>
-  </section>
-
-
-  <section class="soft-skills-section bg-soft-skills d-flex justify-content-center align-items-center min-vh-100">
+  <!-- ══════════ EXPERIENCE ══════════ -->
+  <section id="experience" class="experience-section">
     <div class="container">
-      <h2 class="text-center text-white fw-bold mb-5 mt-5">Soft Skills</h2>
+      <p class="section-eyebrow text-center">Career</p>
+      <h2 class="section-title text-center mb-5">Professional <span>Experience</span></h2>
+
+      <div class="timeline">
+
+        <!-- Current Role -->
+        <div class="timeline-item active">
+          <div class="timeline-dot pulse"></div>
+          <div class="timeline-card featured">
+            <div class="tl-header">
+              <div>
+                <span class="tl-company">Litigando</span>
+                <h3 class="tl-role">IT Analyst <span class="badge-current">Current</span></h3>
+              </div>
+              <span class="tl-date">Oct 2025 — Present</span>
+            </div>
+            <ul class="tl-list">
+              <li>Maintaining and evolving <strong>Gargantua</strong> in production — extending it to process large-scale PDFs and scanned images.</li>
+              <li>Integrated <strong>Google Gemini AI</strong> into an internal application to optimize a key business process, replacing manual decision-making.</li>
+              <li>Participating in legacy software migration efforts, refactoring and documenting existing systems.</li>
+              <li>Performing ongoing server administration and infrastructure maintenance.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>Python</span><span>Spring boot</span><span>RabbitMQ</span><span>Gemini AI</span><span>PDF Processing</span><span>Server Admin</span><span>System Migration</span><span>Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gargantua Project -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <span class="tl-company">Litigando — Project Lead</span>
+                <h3 class="tl-role">Project Gargantua <span class="badge-project">AI Project</span></h3>
+              </div>
+              <span class="tl-date">Aug 2025 — Oct 2025</span>
+            </div>
+            <p class="tl-desc">
+              Identified an opportunity to automate a critical bottleneck: manual PDF processing across hundreds of unpredictable formats,
+              previously handled with brittle regex patterns. Proposed, designed, and fully developed an AI-powered solution from scratch.
+            </p>
+            <ul class="tl-list">
+              <li>Led the full lifecycle: analysis, architecture, development, testing, and production deployment.</li>
+              <li>Built a system capable of intelligently parsing diverse PDF structures where traditional tools failed.</li>
+              <li>Eliminated manual human intervention in the processing pipeline — now runs autonomously in production.</li>
+              <li>Promotion to IT Analyst followed directly from the success of this project.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>PDF Intelligence</span><span>AI</span><span>Process Automation</span><span>System Design</span><span>Python</span><span>Spring boot</span><span>RabbitMQ</span><span>Gemini AI</span><span>Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Development Assistant -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <span class="tl-company">Litigando</span>
+                <h3 class="tl-role">Development Assistant</h3>
+              </div>
+              <span class="tl-date">Jul 2025 — Aug 2025</span>
+            </div>
+            <p class="tl-desc">
+              First professional role. Joined as a development assistant, quickly growing from operational support into independent engineering work.
+            </p>
+            <ul class="tl-list">
+              <li>Administered and monitored internal servers, ensuring system stability and uptime.</li>
+              <li>Built a <strong>Java automation tool</strong> to replace a fully manual internal process — removing the need for human intervention entirely.</li>
+              <li>Collaborated on development tasks across internal applications.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>Java</span><span>Server Admin</span><span>Automation</span><span>Backend Dev</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════ STUDIES ══════════ -->
+  <section id="studies" class="studies-section">
+    <div class="container">
+      <p class="section-eyebrow text-center">Education</p>
+      <h2 class="section-title text-center mb-5">Academic <span>Background</span></h2>
       <div class="row g-4 justify-content-center">
 
-        <!-- Card 1 -->
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
-          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
-            <h5 class="fw-bold">CRITICAL AND ANALYTICAL THINKING</h5>
-            <p class="mb-0">As a seasonal seller, I analyzed purchasing patterns to reorganize products and increase visibility.
-            </p>
-          </div>
+        <div class="col-md-4 col-sm-6">
+          <article class="study-card">
+            <div class="study-icon">
+              <img src="img/umb-logo.webp" alt="UMB">
+            </div>
+            <div class="study-body">
+              <h3 class="study-title">Software Engineering</h3>
+              <p class="study-school">Universidad Manuela Beltrán</p>
+              <p class="study-date">In progress · 7th Semester</p>
+              <p class="study-desc">Comprehensive training in software development, analysis, design, and system architecture.</p>
+            </div>
+          </article>
         </div>
 
-        <!-- Card 2 -->
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
-          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
-            <h5 class="fw-bold">TROUBLESHOO-TING</h5>
-            <p class="mb-0">In a university project, I fixed a bug that prevented compilation just before the final submission.</p>
-          </div>
+        <div class="col-md-4 col-sm-6">
+          <article class="study-card">
+            <div class="study-icon">
+              <img src="img/educamas_logo.jpg" alt="Programate">
+            </div>
+            <div class="study-body">
+              <h3 class="study-title">Junior Frontend Developer</h3>
+              <p class="study-school">Programate School</p>
+              <p class="study-date">Apr 2022 — Nov 2022</p>
+              <p class="study-desc">Intensive training in HTML, CSS, JavaScript and modern frontend tooling.</p>
+            </div>
+          </article>
         </div>
 
-        <!-- Card 3 -->
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
-          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
-            <h5 class="fw-bold">TEAMWORK</h5>
-            <p class="mb-0">During my Sunday job as a waiter, I coordinated effectively with the kitchen and my colleagues to provide timely service.</p>
-          </div>
+        <div class="col-md-4 col-sm-6">
+          <article class="study-card">
+            <div class="study-icon">
+              <img src="img/educamas_logo.jpg" alt="Educamas">
+            </div>
+            <div class="study-body">
+              <h3 class="study-title">Empleatech</h3>
+              <p class="study-school">Educamas</p>
+              <p class="study-date">Apr 2025 — May 2025</p>
+              <p class="study-desc">Professional profile building, job skills, and legal aspects of employment in tech.</p>
+            </div>
+          </article>
         </div>
-
-        <!-- Card 4 -->
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
-          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
-            <h5 class="fw-bold">ASSERTIVE COMMUNICATION</h5>
-            <p class="mb-0">When working as a server, I expressed myself clearly to avoid mistakes in orders during high demand.</p>
-          </div>
-        </div>
-
-
-        <!-- Card 5 -->
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex ">
-          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
-            <h5 class="fw-bold">EMPATHY</h5>
-            <p class="mb-0">At university, I supported a classmate with personal difficulties by adjusting group project assignments.</p>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex ">
-          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
-            <h5 class="fw-bold">RESPONSIBILITY</h5>
-            <p class="mb-0">As a seasonal salesperson, I always arrived on time and took on key responsibilities on busy days.</p>
-          </div>
-        </div>
-
-        <!-- Card 7 -->
-       
-
-        <!-- Card 8 -->
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex ">
-          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
-            <h5 class="fw-bold">TIME MANAGEMENT</h5>
-            <p class="mb-0">In college, I organized classes, projects, and midterms without falling behind or compromising the quality of my work.</p>
-          </div>
-        </div>
-
-        <!-- Card 9 -->
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex ">
-          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
-            <h5 class="fw-bold">ADAPTABILITY</h5>
-            <p class="mb-0">During my first day as a Sunday server, I quickly adapted to the pace and protocol of the restaurant.</p>
-          </div>
-        </div>
-
-         <div class="col-10 col-sm-6 col-md-4 col-lg-3 d-flex mb-5">
-          <div class="card soft-skill-card text-center p-3 rounded-4 w-100 h-100">
-            <h5 class="fw-bold">ACTIVE LISTENING</h5>
-            <p class="mb-0">During practical classes, I listened carefully to the teacher's recommendations and applied them to improve the project.</p>
-          </div>
-        </div>
-
 
       </div>
     </div>
   </section>
 
 
-  <footer class="footer-custom text-center py-3">
-    <p class="mb-1 text-light-emphasis">Franklin Castañeda</p>
+  <!-- ══════════ SKILLS ══════════ -->
+  <section id="skills" class="skills-section-wrap">
+    <div class="container">
+      <p class="section-eyebrow text-center">What I work with</p>
+      <h2 class="section-title text-center mb-5">Technical <span>Skills</span></h2>
 
-    <p class="mb-1">
-      <a href="assets/CV_Franklin_Castañeda.pdf" download class="footer-link">
-        Curriculum Vitae
-      </a>
-    </p>
+      <div class="skills-grid">
 
-    <p class="mb-0">
-      <a href="mailto:franklin2908david@gmail.com" class="footer-link">
-        franklin2908david@gmail.com
+        <!-- AI & Automation -->
+        <div class="skills-card">
+          <div class="skills-label">
+            <i class="bi bi-robot"></i>
+            AI & Automation
+          </div>
+          <div class="skills-content">
+            <div class="tech-box">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" alt="Gemini AI" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="tech-fallback" style="display:none"><i class="bi bi-stars"></i></span>
+              <p>Gemini AI</p>
+            </div>
+            <div class="tech-box">
+              <span class="tech-icon-text">PDF</span>
+              <p>Doc Intelligence</p>
+            </div>
+        
+            <div class="tech-box">
+              <span class="tech-icon-text">⚙️</span>
+              <p>Process Automation</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skills-card">
+          <div class="skills-label">
+            <i class="bi bi-server"></i>
+            Backend
+          </div>
+          <div class="skills-content">
+            <div class="tech-box">
+              <img src="img/logo-java.png" alt="Java">
+              <p>Java</p>
+            </div>
+            <div class="tech-box">
+              <img src="img/spring-logo.png" alt="Spring Boot">
+              <p>Spring Boot</p>
+            </div>
+            <div class="tech-box">
+              <img src="img/py-logo.png" alt="Python">
+              <p>Python</p>
+            </div>
+            <div class="tech-box">
+              <img src="img/fastapi-logo.png" alt="FastAPI">
+              <p>FastAPI</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skills-card">
+          <div class="skills-label">
+            <i class="bi bi-window"></i>
+            Frontend
+          </div>
+          <div class="skills-content">
+            <div class="tech-box">
+              <img src="img/html-logo.png" alt="HTML5">
+              <p>HTML5</p>
+            </div>
+            <div class="tech-box">
+              <img src="img/css-logo.png" alt="CSS3">
+              <p>CSS3</p>
+            </div>
+            <div class="tech-box">
+              <img src="img/vue-logo.png" alt="Vue">
+              <p>Vue.js</p>
+            </div>
+            <div class="tech-box">
+              <img src="img/Bootstrap_logo.png" alt="Bootstrap">
+              <p>Bootstrap</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data & Databases -->
+        <div class="skills-card">
+          <div class="skills-label">
+            <i class="bi bi-database"></i>
+            Data
+          </div>
+          <div class="skills-content">
+            <div class="tech-box">
+              <img src="img/mysql-logo.png" alt="MySQL">
+              <p>MySQL</p>
+            </div>
+            <div class="tech-box">
+              <img src="img/mongodb-logo.png" alt="MongoDB">
+              <p>MongoDB</p>
+            </div>
+            <div class="tech-box">
+              <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/4/supabase-icon-kpjasdqlnu8exakst6f44r.png/supabase-icon-5uqgeeqeknngv9las8zeef.png?_a=DATAiZAAZAA0" alt="MongoDB">
+              <p>Supabase</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & DevOps -->
+        <div class="skills-card">
+          <div class="skills-label">
+            <i class="bi bi-tools"></i>
+            Tools
+          </div>
+          <div class="skills-content">
+            <div class="tech-box">
+              <img src="img/git-logo.png" alt="Git">
+              <p>Git</p>
+            </div>
+            <div class="tech-box">
+              <img src="img/postman-icon.png" alt="Postman">
+              <p>Postman</p>
+            </div>
+            <div class="tech-box">
+              <img src="https://www.svgrepo.com/show/303576/rabbitmq-logo.svg" alt="Jira">
+              <p>RabbitMQ</p>
+            </div>
+            <div class="tech-box">
+              <img src="https://cdn.worldvectorlogo.com/logos/docker-4.svg" alt="Jira">
+              <p>Docker</p>
+            </div>
+            <div class="tech-box">
+              <img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/aws-color.png" alt="Jira">
+              <p>AWS</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════ PROJECTS ══════════ -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <p class="section-eyebrow text-center">What I've built</p>
+      <h2 class="section-title text-center mb-5">My <span>Projects</span></h2>
+
+      <!-- Featured Project -->
+      <div class="featured-project">
+        <div class="fp-badge">⭐ Flagship Project</div>
+        <div class="row g-0 align-items-center">
+          <div class="col-md-7 p-4 p-md-5">
+            <h3 class="fp-title">Gargantua</h3>
+            <p class="fp-stack">Java · AI · PDF Intelligence · Process Automation</p>
+            <p class="fp-desc">
+              An AI-powered document intelligence system built in production at Litigando. Replaced a manual + regex-based PDF
+              processing pipeline that struggled with hundreds of inconsistent document formats. Gargantua runs fully autonomously,
+              requiring no human intervention, and has been continuously extended to handle scanned images and large-scale PDFs.
+            </p>
+            <div class="fp-metrics">
+              <div class="metric"><span>100%</span> Automated</div>
+              <div class="metric"><span>∞</span> PDF Formats</div>
+              <div class="metric"><span>0</span> Manual Steps</div>
+            </div>
+          </div>
+          <div class="col-md-5 d-flex align-items-center justify-content-center p-4">
+            <div class="fp-visual">
+              <div class="fp-diagram">
+                <div class="fp-node input">PDF Input</div>
+                <div class="fp-arrow"><i class="bi bi-arrow-down"></i></div>
+                <div class="fp-node ai">AI Analysis</div>
+                <div class="fp-arrow"><i class="bi bi-arrow-down"></i></div>
+                <div class="fp-node output">Structured Data</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Grid -->
+      <div class="row g-4 mt-2">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-header">
+              <i class="bi bi-shield-lock project-icon"></i>
+              <div class="project-links">
+                <a href="https://github.com/fraankliin/Auth-Service-JWT-Spring.git" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+            <h5 class="project-title">AuthMaster</h5>
+            <p class="project-stack">Spring Boot · Spring Security · JWT · BCrypt</p>
+            <p class="project-desc">Authentication microservice with JWT and BCrypt. Production-ready security layer for modern service architectures.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-header">
+              <i class="bi bi-graph-up project-icon"></i>
+              <div class="project-links">
+                <a href="https://github.com/fraankliin/Proyecto_Pagina_Apuestas.git" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+            <h5 class="project-title">YourBET</h5>
+            <p class="project-stack">Java · JSP · Servlets · MySQL · JPA</p>
+            <p class="project-desc">Sports betting web platform integrating live match APIs, user accounts, and dynamic odds tracking.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-header">
+              <i class="bi bi-currency-dollar project-icon"></i>
+              <div class="project-links">
+                <a href="https://github.com/Universidad-UMB/proyecto-fastAPI-mongoDB" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+            <h5 class="project-title">FinWise API</h5>
+            <p class="project-stack">FastAPI · Python · JWT · MongoDB</p>
+            <p class="project-desc">Personal finance REST API with secure auth, expense tracking, monthly summaries, and MongoDB persistence.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-header">
+              <i class="bi bi-globe project-icon"></i>
+              <div class="project-links">
+                <a href="https://github.com/fraankliin/ing-web-proyect.git" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+            <h5 class="project-title">WebSolutions</h5>
+            <p class="project-stack">HTML5 · CSS · Vue.js · Google Analytics · Schema.org</p>
+            <p class="project-desc">Accessible web catalog with SEO best practices, microtagging, Google Tag Manager, and analytics integration.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-header">
+              <i class="bi bi-leaf project-icon"></i>
+              <div class="project-links">
+                <a href="https://github.com/ncastellanosort/carbon_footprint_frontend.git" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+            <h5 class="project-title">Carbon Footprint</h5>
+            <p class="project-stack">Spring · Go · FastAPI · Vue.js</p>
+            <p class="project-desc">Microservices application for calculating and tracking personal environmental impact across multiple services.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-header">
+              <i class="bi bi-clock-history project-icon"></i>
+              <div class="project-links">
+                <a href="https://github.com/fraankliin/history-service-spring.git" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+            <h5 class="project-title">ChronoTrack Service</h5>
+            <p class="project-stack">Spring Boot · Spring Data JPA · PostgreSQL</p>
+            <p class="project-desc">REST microservice for storing and querying event history with JPA-backed PostgreSQL persistence.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════ SOFT SKILLS ══════════ -->
+  <section id="softskills" class="soft-skills-section">
+    <div class="container">
+      <p class="section-eyebrow text-center" style="color:rgba(255,255,255,0.6)">Beyond the code</p>
+      <h2 class="section-title text-center mb-5" style="color:#fff">Soft <span>Skills</span></h2>
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+          <div class="soft-skill-card">
+            <i class="bi bi-lightbulb soft-icon"></i>
+            <h5>Critical Thinking</h5>
+            <p>Identified and proposed process automation at Litigando by analyzing inefficiencies in a manual workflow.</p>
+          </div>
+        </div>
+
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+          <div class="soft-skill-card">
+            <i class="bi bi-people soft-icon"></i>
+            <h5>Teamwork</h5>
+            <p>Collaborated cross-functionally during development and migration projects, aligning with non-technical stakeholders.</p>
+          </div>
+        </div>
+
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+          <div class="soft-skill-card">
+            <i class="bi bi-chat-dots soft-icon"></i>
+            <h5>Communication</h5>
+            <p>Presented technical proposals clearly to management — including the Gargantua initiative — earning approval and ownership.</p>
+          </div>
+        </div>
+
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+          <div class="soft-skill-card">
+            <i class="bi bi-arrow-repeat soft-icon"></i>
+            <h5>Adaptability</h5>
+            <p>Navigated rapidly changing requirements in production environments, pivoting the architecture of Gargantua as needed.</p>
+          </div>
+        </div>
+
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+          <div class="soft-skill-card">
+            <i class="bi bi-clock soft-icon"></i>
+            <h5>Time Management</h5>
+            <p>Delivered Gargantua from idea to production in ~2 months while maintaining studies and other work responsibilities.</p>
+          </div>
+        </div>
+
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+          <div class="soft-skill-card">
+            <i class="bi bi-search soft-icon"></i>
+            <h5>Problem Solving</h5>
+            <p>Designed a novel document intelligence approach when conventional regex-based tools couldn't handle diverse PDF structures.</p>
+          </div>
+        </div>
+
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+          <div class="soft-skill-card">
+            <i class="bi bi-star soft-icon"></i>
+            <h5>Proactivity</h5>
+            <p>Self-initiated the automation proposal before it was asked — going beyond my role as a junior assistant to create impact.</p>
+          </div>
+        </div>
+
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+          <div class="soft-skill-card">
+            <i class="bi bi-book soft-icon"></i>
+            <h5>Continuous Learning</h5>
+            <p>Independently studied AI integration patterns and document processing techniques to build production-ready systems.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════ CONTACT ══════════ -->
+  <section id="contact" class="contact-section">
+    <div class="container text-center">
+      <p class="section-eyebrow">Let's talk</p>
+      <h2 class="section-title mb-3">Open to <span>Opportunities</span></h2>
+      <p class="contact-sub">I'm actively looking for roles as a Junior AI Engineer, Backend Developer, or Automation Engineer.<br>
+        Let's build something intelligent together.</p>
+      <div class="contact-links">
+        <a href="mailto:franklin2908david@gmail.com" class="contact-card">
+          <i class="bi bi-envelope-fill"></i>
+          <span>franklin2908david@gmail.com</span>
+        </a>
+        <a href="https://www.linkedin.com/in/franklin-castañeda-8264a4349" target="_blank" class="contact-card">
+          <i class="bi bi-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/fraankliin" target="_blank" class="contact-card">
+          <i class="bi bi-github"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+      <a href="assets/CV_Franklin_Castaneda.pdf" download class="btn-cv">
+        <i class="bi bi-file-earmark-arrow-down"></i> Download CV
       </a>
-    </p>
+    </div>
+  </section>
+
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer-custom">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between py-3">
+      <span class="footer-name">Franklin Castañeda</span>
+      <span class="footer-copy">Built with intention · 2025</span>
+    </div>
   </footer>
 
 
-
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
